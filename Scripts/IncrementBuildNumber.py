@@ -18,7 +18,7 @@ if not lib.isDistributionOrAdHocBuildForDevice:
     print('Not incrementing build number; this is an internal build')
     exit(0)
 
-newBuildNumber = subprocess.check_output(["./bin/buildNo.sh",], shell=True)
+newBuildNumber = subprocess.check_output(["./bin/buildNo.sh",], shell=True).strip()
 print("build number: %s" % newBuildNumber)
 
 lib.infoPlist['CFBundleVersion'] = newBuildNumber
