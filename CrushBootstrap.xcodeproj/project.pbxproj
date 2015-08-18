@@ -305,7 +305,6 @@
 				CE78B447D2424EDEAEAB74EB /* Check Pods Manifest.lock */,
 				BDDB994B18C3943B003EBC42 /* Sources */,
 				BDDB994C18C3943B003EBC42 /* Frameworks */,
-				BD36522718CE89C6009107A7 /* Increment Build Number */,
 				BDDB994D18C3943B003EBC42 /* Resources */,
 				5934C2BEC75D4C51B3689E07 /* Copy Pods Resources */,
 				BDF1758318C3A844008BD9C6 /* Fabric Script */,
@@ -471,21 +470,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# For non-app store builds, this script badges the app's icons to indicate whether\n# the build targets staging or production, as well as its version and build number.\n# Changes are made to the icons in the products directory; the icons in your app\n# are unchanged.\n\n# As always, if this isn't to your liking, feel free to remove this build phase.\n\n\"${SRCROOT}/Scripts/BadgeIcons.py\"";
-			showEnvVarsInLog = 0;
-		};
-		BD36522718CE89C6009107A7 /* Increment Build Number */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Increment Build Number";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# This script increments the build number (CFBundleVersion in the Info.plist)\n# on Ad-Hoc or Distribution builds that target real devices.\n# In the context of Amaro, that means an archive build of any scheme, or any\n# non-simulator build of the AppStore scheme.\n\n# Feel free to remove this build phase if that is not desired behavior for you.\n\n\"${SRCROOT}/Scripts/IncrementBuildNumber.py\"";
 			showEnvVarsInLog = 0;
 		};
 		BDC7F36218EBA5EE0045D4BD /* Remove Unused Localizations */ = {
