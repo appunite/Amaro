@@ -309,7 +309,6 @@
 				5934C2BEC75D4C51B3689E07 /* Copy Pods Resources */,
 				BDF1758318C3A844008BD9C6 /* Fabric Script */,
 				BDC7F36218EBA5EE0045D4BD /* Remove Unused Localizations */,
-				BD35136319BE21BD00A19841 /* Badge App Icons */,
 				209436D51AFCD56D004FC6DB /* git hash */,
 			);
 			buildRules = (
@@ -455,21 +454,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Specs/Pods-Specs-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BD35136319BE21BD00A19841 /* Badge App Icons */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Badge App Icons";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# For non-app store builds, this script badges the app's icons to indicate whether\n# the build targets staging or production, as well as its version and build number.\n# Changes are made to the icons in the products directory; the icons in your app\n# are unchanged.\n\n# As always, if this isn't to your liking, feel free to remove this build phase.\n\n\"${SRCROOT}/Scripts/BadgeIcons.py\"";
 			showEnvVarsInLog = 0;
 		};
 		BDC7F36218EBA5EE0045D4BD /* Remove Unused Localizations */ = {
