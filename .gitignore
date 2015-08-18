@@ -22,6 +22,16 @@ DerivedData
 # CocoaPods
 Pods
 
+# Certs
+*.p12
+
+# Artifacts
+*.ipa
+*.dSYM.zip
+*.mobileprovision
+fastlane/report.xml
+
+
 # Sass' compilation cache
 .sass-cache
 
