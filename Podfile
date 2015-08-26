@@ -7,8 +7,8 @@ inhibit_all_warnings!
 pod 'AFNetworking', '~> 2.5'
 
 #
-pod 'Fabric'
-pod 'Fabric/Crashlytics'
+pod 'Fabric', '~> 1.2'
+pod 'Crashlytics', '~> 3.0'
 
 # Various goodies
 #pod 'FormatterKit'     # For all your string formatting needs
