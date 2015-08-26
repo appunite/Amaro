@@ -1,0 +1,44 @@
+before_script:
+  - export LANG=en_US.UTF-8
+  # - chmod 0600 build_id_rsa
+  # - ssh-add build_id_rsa
+  - git submodule update --init --recursive
+  - gem install bundler
+  - bundle install
+
+types:
+  - test
+  - internal
+  - public
+
+test:
+  type: test
+  script: "fastlane ios test"
+  tags:
+    - mac
+  except:
+    - /^appstore-.*$/ # any git refs (e.g. tag) starting with "appstore-"
+
+production:
+  type: internal
+  script: "fastlane ios prod --env production"
+  tags:
+    - mac
+  only:
+    - master
+
+staging:
+  type: internal
+  script: "fastlane ios stage --env staging"
+  tags:
+    - mac
+  only:
+    - master
+
+appstore:
+  type: public
+  script: "fastlane ios appstore --env appstore"
+  tags:
+    - mac
+  only:
+    - /^appstore-.*$/ # any git refs (e.g. tag) starting with "appstore-"
