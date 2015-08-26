@@ -31,6 +31,8 @@ Pods
 *.mobileprovision
 fastlane/report.xml
 
+# local
+.env.local
 
 # Sass' compilation cache
 .sass-cache
