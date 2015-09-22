@@ -17,7 +17,7 @@ test:
   tags:
     - mac
   except:
-    - /^appstore-.*$/ # any git refs (e.g. tag) starting with "appstore-"
+    - /^testflight-.*$/ # any git refs (e.g. tag) starting with "testflight-"
 
 production:
   type: internal
@@ -41,4 +41,4 @@ appstore:
   tags:
     - mac
   only:
-    - /^appstore-.*$/ # any git refs (e.g. tag) starting with "appstore-"
+    - /^testflight-.*$/ # any git refs (e.g. tag) starting with "testflight-"
